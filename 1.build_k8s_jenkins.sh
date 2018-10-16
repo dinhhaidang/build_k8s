@@ -7,7 +7,17 @@
 
 #----------------Setup moi truong K8S--------------------#
 #Cau hinh zone mac dinh tren GCP
+echo "#-------------------------------------------------------------------#"
+echo "#                 Tao VM Rancher quan ly Cluster                    #"
+echo "#-------------------------------------------------------------------#"
 gcloud config set compute/zone asia-east1-a
+gcloud compute instances create rancher-k8s \
+   --custom-cpu 2 \
+   --custom-memory 2 \
+   --image-family ubuntu-1804-lts \
+   --image=ubuntu-1804-bionic-v20181003 \
+   --size=10 \
+   --type=pd-ssd 
 
 echo "#-------------------------------------------------------------------#"
 echo "#                 Dang tao network: ecoe-k8s                        #"
