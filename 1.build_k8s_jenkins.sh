@@ -10,7 +10,7 @@
 gcloud config set compute/zone asia-east1-a
 
 echo "#-------------------------------------------------------------------#"
-echo "#                 Dang tao network: ecoe-k8s                    #"
+echo "#                 Dang tao network: ecoe-k8s                        #"
 echo "#-------------------------------------------------------------------#"
 gcloud compute networks create ecoe-k8s
 
