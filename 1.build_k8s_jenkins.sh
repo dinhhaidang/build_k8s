@@ -11,7 +11,7 @@ echo "#-------------------------------------------------------------------#"
 echo "#                 Tao VM Rancher quan ly Cluster                    #"
 echo "#-------------------------------------------------------------------#"
 gcloud config set compute/zone asia-east1-a
-gcloud beta compute instances create rancher-k8s \
+gcloud compute instances create rancher-k8s \
    --custom-cpu 2 \
    --custom-memory 4 \
    --boot-disk-size 10 \
