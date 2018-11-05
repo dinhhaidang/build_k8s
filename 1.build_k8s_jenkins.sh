@@ -17,6 +17,11 @@ gcloud compute instances create rancher-k8s \
    --boot-disk-size 10 \
    --boot-disk-type pd-ssd \
 
+echo "#-------------------------------------------------------------------#"
+echo "#                 Dang tao network: ecoe-k8s                        #"
+echo "#-------------------------------------------------------------------#"
+gcloud compute networks create ecoe-k8s
+
 #Tao he thong K8S
 echo "#-------------------------------------------------------------------#"
 echo "#                 Dang tao cluster kubernetes                       #"
