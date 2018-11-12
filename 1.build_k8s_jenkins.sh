@@ -34,6 +34,11 @@ kubectl get nodes
 #Chung thuc cum cluster vua moi tao
 gcloud container clusters get-credentials ecoe-k8s
 
+echo "#-------------------------------------------------------------------#"
+echo "#                 Fix import to Racher for K8S                      #"
+echo "#-------------------------------------------------------------------#"
+kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user dang.winapp@gmail.com
+
 #-----------------Setup Helm------------------------#
 curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 chmod 755 get_helm.sh
